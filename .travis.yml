@@ -14,7 +14,6 @@ script:
 #TravisCI seems to be coming in on undocumented IP addresses.
  - dig +short myip.opendns.com @resolver1.opendns.com
 
-
 after_success:
 - docker login -u ${DHUB_USERNAME} -p ${DHUB_PASS}
 - echo "${SSH_KEY}" |  base64 --decode > /tmp/ssh_rsa
